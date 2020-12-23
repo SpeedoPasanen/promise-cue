@@ -3,7 +3,7 @@
  * Usage:
  * const someCue = new PromiseCue<MyDataType>();
  * someCue.add<ResultInterface>(() => someAsyncMethod(myArgs)).then((result: ResultInterace) => {
- * DoSomethingWith(result);
+ * doSomethingWith(result);
  * });
  */
 
