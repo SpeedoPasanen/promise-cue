@@ -1,10 +1,16 @@
 /** * Wrap any promise into a queue of promises which execute one at a time.
  * Returns the result of the given function when it has been resolved.
  * Usage:
- * const someCue = new PromiseCue<MyDataType>();
- * someCue.add(() => someAsyncMethod(myArgs)).then((result) => {
- * doSomethingWith(result);
- * });
+ * 
+    class SomeService {
+      promiseCue = new PromiseCue<MyClass>();
+
+      async doSomethingCueued {
+        const result = await this.promiseCue.add(() => someAsyncMethod(myArgs));
+        return result;
+      }
+
+   }
  */
 
 export class PromiseCue<T> {
