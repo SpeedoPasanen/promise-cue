@@ -1,9 +1,9 @@
-/** * Wrap any promise into a queue of promises which execute one at a time. 
+/** * Wrap any promise into a queue of promises which execute one at a time.
  * Returns the result of the given function when it has been resolved.
  * Usage:
  * const someCue = new PromiseCue<MyDataType>();
-    someCue.add<ResultInterface>(() => someAsyncMethod(myArgs)).then((result: ResultInterace) => {
-    DoSomethingWith(result);
+ * someCue.add<ResultInterface>(() => someAsyncMethod(myArgs)).then((result: ResultInterace) => {
+ * DoSomethingWith(result);
  * });
  */
 
