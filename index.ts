@@ -5,7 +5,7 @@
     class SomeService {
       promiseCue = new PromiseCue<MyClass>();
 
-      async doSomethingCueued {
+      async doSomethingCueued() {
         const result = await this.promiseCue.add(() => someAsyncMethod(myArgs));
         return result;
       }
